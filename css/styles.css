@@ -162,6 +162,7 @@ header .container {
 }
 
 .uppersite {
+  margin: 0 auto;
   min-height: 600px;
   background-image: linear-gradient(
       to right,
