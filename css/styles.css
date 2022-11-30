@@ -33,6 +33,11 @@ img {
   height: auto;
 }
 
+button {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   background-color: var(--light-color);
@@ -46,7 +51,7 @@ body {
 
 header {
   border: 1px solid #ececec;
-  /* padding: 25px 0; */
+
 }
 
 header .container {
@@ -67,13 +72,17 @@ header .container {
 }
 
 .navbar {
-  position: absolute;
-  top: 32px;
   display: flex;
   margin-left: 93px;
 }
 
-.navbar_item a {
+.navbar_item {
+
+}
+
+.navbar_item .nav-link {
+  display: block;
+  padding: 32px 0;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.2;
@@ -95,7 +104,7 @@ header .container {
 .current::after {
   content: "";
   position: relative;
-  top: 28px;
+  bottom: -1px;
   display: block;
   width: 100%;
   height: 4px;
@@ -111,7 +120,6 @@ header .container {
 }
 
 .contacts-item {
-  padding: 32px 0;
   display: flex;
   align-items: center;
 }
@@ -165,7 +173,7 @@ header .container {
   background-color: var(--primary-background);
   padding-top: 200px;
   max-width: 1600px;
-  margin: 0 auto;
+  text-align: center;
 }
 
 .main-header {
@@ -175,11 +183,10 @@ header .container {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--light-color);
-  text-align: center;
+  margin-bottom: 30px;
 }
 
 .frst-btn {
-  display: block;
   color: var(--light-color);
   font-weight: 700;
   font-size: 16px;
@@ -192,13 +199,11 @@ header .container {
   height: 50px;
   border-style: none;
   cursor: pointer;
-  margin: 0 auto;
-  /* text-align: center;
-  align-items: center; */
-  margin-top: 30px;
+
 }
 
 .frst-btn:active {
+
   background-color: #188ce8;
 }
 
@@ -209,11 +214,15 @@ header .container {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  transition: opacity  250ms ease-in-out,
+  visibility 250ms ease-in-out;
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
 }
 
 .modal {
@@ -266,9 +275,13 @@ header .container {
 } */
 
 .speciality-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
   background-color: var(--light-background);
   border-radius: 4px;
-  padding: 25px 100px;
   margin-bottom: 30px;
 }
 
@@ -279,10 +292,10 @@ header .container {
   text-transform: uppercase;
   color: var(--primary-color);
   text-align: left;
+  margin-bottom: 10px;
 }
 
 .speciality-item p {
-  margin-top: 10px;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -387,8 +400,11 @@ header .container {
   color: var(--gray-color);
   background-color: transparent;
   border-radius: 50%;
-  display: block;
-  padding: 12px;
+  display: flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
   transition-property: color, background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -419,11 +435,11 @@ header .container {
 
 .partners-link {
   color: var(--gray-color);
-  display: block;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  padding: 16px 32px;
-  /* width: 170px;
-  height: 92px; */
+  width: 170px;
+  height: 92px;
   border: 1px solid var(--gray-color);
   border-radius: 4px;
   transition-property: color, border;
@@ -445,6 +461,7 @@ footer {
 
 .footer {
   display: flex;
+  align-items: baseline;
 }
 
 .footer-address {
@@ -491,16 +508,13 @@ footer {
   color: var(--light-color);
 }
 
-.footer-media {
-  margin-top: 12px;
-}
-
 .footer-header {
   font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--light-color);
+  margin-bottom: 20px;
 }
 
 .footer-socials {
@@ -512,11 +526,11 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px;
+  width: 44px;
+  height: 44px;
   color: var(--light-color);
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  margin-top: 20px;
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

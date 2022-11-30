@@ -20,12 +20,13 @@
         <nav>
           <ul class="navbar">
             <li class="navbar_item current">
-              <a href="./index.html" class="active-page">Студія</a>
+              <a href="./index.html" class="nav-link active-page">Студія</a>
             </li>
             <li class="navbar_item">
-              <a href="./portfolio.html">Портфоліо</a>
+              <a href="./portfolio.html" class="nav-link">Портфоліо</a>
             </li>
-            <li class="navbar_item"><a href="#">Контакти</a></li>
+            <li class="navbar_item">
+              <a href="#"   class="nav-link">Контакти</a></li>
           </ul>
         </nav>
         <ul class="contacts-list">
@@ -370,15 +371,6 @@
         </div>
       </section>
 
-      <div class="backdrop is-hidden" data-modal>
-        <div class="modal">
-          <button type="button" class="btn-close" data-modal-close>
-            <svg class="icon icon-close" width="11" height="11">
-              <use href="./img/icons.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
     </main>
 
     <footer>
@@ -441,6 +433,17 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="btn-close" data-modal-close>
+          <svg class="icon icon-close" width="11" height="11">
+            <use href="./img/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
     <script src="./js/modal.js"></script>
   </body>
 </html>
